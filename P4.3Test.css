@@ -1,0 +1,27 @@
+.body {
+    margin: auto;
+}
+#input-text {
+    float: left;
+    margin-right: 50px;
+    width: 250px;
+    height: 250px;
+}
+.form{
+    margin-left: 350px;
+    padding: 15px;
+    border: 1px solid black;
+    width: 450px;
+    height: 175px;
+    background-color: lightblue;
+}
+#responsive-border-letter{
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#responsive-border-bg{
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 5px;
+}

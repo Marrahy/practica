@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="P4.3Test.css">
+    <title>P4.3</title>
+</head>
+<body>
+    <div class="body">
+        <div class="text-area">
+            <textarea id="input-text"></textarea>
+        </div>
+        <div class="form">
+            <form id="form-options">
+                <div id="responsive-border-letter">
+                    <label for="letter-color">Color de letra</label>
+                    <input type="text" id="letter-color-input">
+                    <input type="button" id="letter-color-button" value="Cambiar color letra">
+                    <br>
+                </div>
+                <div id="responsive-border-bg">
+                    <label for="bg-color">Color de fondo</label>
+                    <input type="text" id="bg-color-input">
+                    <input type="button" id="bg-color-button" value="Cambiar color fondo">
+                    <br>
+                </div>
+                <label for="letter-size">Tamaño de fuente</label>
+                <input type="text" id="font-size-input">
+                <input type="button" id="font-size-button" value="Cambiar escala letra">
+                <br><br><br>
+                <label>Negrita</label>
+                <input type="checkbox" id="bold-checkbox">
+                <label>Itálica</label>
+                <input type="checkbox" id="italic-checkbox">
+                <label>Subrayado</label>
+                <input type="checkbox" id="underline-checkbox">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("letter-color-button").addEventListener("click", function() {
+            var letterColor = document.getElementById("letter-color-input").value;
+            document.getElementById("input-text").style.color = letterColor;
+            document.getElementById("responsive-border-letter").style.borderColor = letterColor;
+        });
+
+        document.getElementById("bg-color-button").addEventListener("click", function() {
+            var bgColor = document.getElementById("bg-color-input").value;
+            document.getElementById("input-text").style.backgroundColor = bgColor;
+            document.getElementById("responsive-border-bg").style.borderColor = bgColor;
+        });
+
+        document.getElementById("font-size-button").addEventListener("click", function() {
+            var fontSize = document.getElementById("font-size-input").value;
+            document.getElementById("input-text").style.fontSize = fontSize + "px";
+        });
+
+        document.getElementById("bold-checkbox").addEventListener("change", function() {
+            var bold = document.getElementById("bold-checkbox").checked;
+            document.getElementById("input-text").style.fontWeight = bold ? "bold" : "normal";
+        });
+
+        document.getElementById("italic-checkbox").addEventListener("change", function() {
+            var italic = document.getElementById("italic-checkbox").checked;
+            document.getElementById("input-text").style.fontStyle = italic ? "italic" : "normal";
+        });
+
+        document.getElementById("underline-checkbox").addEventListener("change", function() {
+            var underline = document.getElementById("underline-checkbox").checked;
+            document.getElementById("input-text").style.textDecoration = underline ? "underline" : "none";
+        });
+    </script>
+</body>
+</html>
